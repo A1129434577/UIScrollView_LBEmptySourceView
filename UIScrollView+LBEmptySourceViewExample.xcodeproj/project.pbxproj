@@ -15,10 +15,10 @@
 		401C57CE247D0914008D2093 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 401C57CC247D0914008D2093 /* LaunchScreen.storyboard */; };
 		401C57D1247D0914008D2093 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 401C57D0247D0914008D2093 /* main.m */; };
 		4054496B247FAD58008B3F9B /* UIScrollView+LBEmptySourceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40544969247FAD57008B3F9B /* UIScrollView+LBEmptySourceView.m */; };
-		4054496C247FAD58008B3F9B /* UIScrollView+LBEmptySourceView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 4054496A247FAD58008B3F9B /* UIScrollView+LBEmptySourceView.podspec */; };
+		4054496C247FAD58008B3F9B /* UIScrollView_LBEmptySourceView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 4054496A247FAD58008B3F9B /* UIScrollView_LBEmptySourceView.podspec */; };
 		40544971247FAECD008B3F9B /* LBSourceEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40544970247FAECD008B3F9B /* LBSourceEmptyView.m */; };
 		40544975247FAEDF008B3F9B /* MJRefreshNormalHeader+LBEmptySourceViewAuto.m in Sources */ = {isa = PBXBuildFile; fileRef = 40544973247FAEDF008B3F9B /* MJRefreshNormalHeader+LBEmptySourceViewAuto.m */; };
-		40544977247FAF13008B3F9B /* MJRefreshNormalHeader+LBEmptySourceViewAuto.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 40544976247FAF13008B3F9B /* MJRefreshNormalHeader+LBEmptySourceViewAuto.podspec */; };
+		40544977247FAF13008B3F9B /* MJRefreshNormalHeader_LBEmptySourceViewAuto.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 40544976247FAF13008B3F9B /* MJRefreshNormalHeader_LBEmptySourceViewAuto.podspec */; };
 		FF3589729424FF1E3B5CCF73 /* libPods-UIScrollView+LBEmptySourceViewExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E52C109E951705B2BEEE8EB /* libPods-UIScrollView+LBEmptySourceViewExample.a */; };
 /* End PBXBuildFile section */
 
@@ -38,12 +38,12 @@
 		401C57D0247D0914008D2093 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		40544968247FAD57008B3F9B /* UIScrollView+LBEmptySourceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+LBEmptySourceView.h"; sourceTree = "<group>"; };
 		40544969247FAD57008B3F9B /* UIScrollView+LBEmptySourceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+LBEmptySourceView.m"; sourceTree = "<group>"; };
-		4054496A247FAD58008B3F9B /* UIScrollView+LBEmptySourceView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UIScrollView+LBEmptySourceView.podspec"; sourceTree = "<group>"; };
+		4054496A247FAD58008B3F9B /* UIScrollView_LBEmptySourceView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UIScrollView_LBEmptySourceView.podspec; sourceTree = "<group>"; };
 		4054496F247FAECD008B3F9B /* LBSourceEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBSourceEmptyView.h; sourceTree = "<group>"; };
 		40544970247FAECD008B3F9B /* LBSourceEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBSourceEmptyView.m; sourceTree = "<group>"; };
 		40544973247FAEDF008B3F9B /* MJRefreshNormalHeader+LBEmptySourceViewAuto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MJRefreshNormalHeader+LBEmptySourceViewAuto.m"; sourceTree = "<group>"; };
 		40544974247FAEDF008B3F9B /* MJRefreshNormalHeader+LBEmptySourceViewAuto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MJRefreshNormalHeader+LBEmptySourceViewAuto.h"; sourceTree = "<group>"; };
-		40544976247FAF13008B3F9B /* MJRefreshNormalHeader+LBEmptySourceViewAuto.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "MJRefreshNormalHeader+LBEmptySourceViewAuto.podspec"; sourceTree = "<group>"; };
+		40544976247FAF13008B3F9B /* MJRefreshNormalHeader_LBEmptySourceViewAuto.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MJRefreshNormalHeader_LBEmptySourceViewAuto.podspec; sourceTree = "<group>"; };
 		57FBA7313AEF954D0FB5D69F /* Pods-UIScrollView+LBEmptySourceViewExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIScrollView+LBEmptySourceViewExample.release.xcconfig"; path = "Target Support Files/Pods-UIScrollView+LBEmptySourceViewExample/Pods-UIScrollView+LBEmptySourceViewExample.release.xcconfig"; sourceTree = "<group>"; };
 		B0F64E7AA5EA29C641BA2EED /* Pods-UIScrollView+LBEmptySourceViewExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIScrollView+LBEmptySourceViewExample.debug.xcconfig"; path = "Target Support Files/Pods-UIScrollView+LBEmptySourceViewExample/Pods-UIScrollView+LBEmptySourceViewExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,8 +80,8 @@
 		401C57B2247D090F008D2093 = {
 			isa = PBXGroup;
 			children = (
-				4054496A247FAD58008B3F9B /* UIScrollView+LBEmptySourceView.podspec */,
-				40544976247FAF13008B3F9B /* MJRefreshNormalHeader+LBEmptySourceViewAuto.podspec */,
+				4054496A247FAD58008B3F9B /* UIScrollView_LBEmptySourceView.podspec */,
+				40544976247FAF13008B3F9B /* MJRefreshNormalHeader_LBEmptySourceViewAuto.podspec */,
 				40544967247FAD57008B3F9B /* UIScrollView+LBEmptySourceView */,
 				40544972247FAEDF008B3F9B /* MJRefreshNormalHeader+LBEmptySourceViewAuto */,
 				401C57BD247D090F008D2093 /* UIScrollView+LBEmptySourceViewExample */,
@@ -204,10 +204,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40544977247FAF13008B3F9B /* MJRefreshNormalHeader+LBEmptySourceViewAuto.podspec in Resources */,
+				40544977247FAF13008B3F9B /* MJRefreshNormalHeader_LBEmptySourceViewAuto.podspec in Resources */,
 				401C57CE247D0914008D2093 /* LaunchScreen.storyboard in Resources */,
 				401C57CB247D0914008D2093 /* Assets.xcassets in Resources */,
-				4054496C247FAD58008B3F9B /* UIScrollView+LBEmptySourceView.podspec in Resources */,
+				4054496C247FAD58008B3F9B /* UIScrollView_LBEmptySourceView.podspec in Resources */,
 				401C57C9247D090F008D2093 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
