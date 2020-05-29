@@ -1,0 +1,3 @@
+# UIScrollView_LBEmptySourceView
+UIScrollView添加一个无内容的时候空视图根据数据源（包括header和footer）自动展示与消失的功能。 
+对UIScrollView+LBEmptySourceView的功能扩充，当MJRefreshHeader刷新时需要LBEmptySourceView自动隐藏的功能。
