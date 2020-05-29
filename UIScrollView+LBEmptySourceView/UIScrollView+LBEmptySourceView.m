@@ -248,15 +248,11 @@ static NSString *AllowShowEmptySourceViewWhenHaveHeaderOrFooterKey = @"AllowShow
                             if ([dataSource respondsToSelector:@selector(collectionView:viewForSupplementaryElementOfKind:atIndexPath:)]) {
                                 
                                 if (haveSectionHeader) {
-                                    if ([dataSource collectionView:collectionView viewForSupplementaryElementOfKind:UICollectionElementKindSectionHeader atIndexPath:[NSIndexPath indexPathForItem:sectionItemsNumber inSection:section]]) {
-                                        self.dataSourceCount += 1;
-                                    }
+                                    self.dataSourceCount += 1;
                                 }
                                 
                                 if (haveSectionFooter) {
-                                    if ([dataSource collectionView:collectionView viewForSupplementaryElementOfKind:UICollectionElementKindSectionFooter atIndexPath:[NSIndexPath indexPathForItem:sectionItemsNumber inSection:section]]) {
-                                        self.dataSourceCount += 1;
-                                    }
+                                    self.dataSourceCount += 1;
                                 }
                             }
                             
