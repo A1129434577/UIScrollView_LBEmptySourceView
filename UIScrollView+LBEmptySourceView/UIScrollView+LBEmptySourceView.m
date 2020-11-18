@@ -142,10 +142,6 @@ static NSString *AllowShowEmptySourceViewWhenHaveHeaderOrFooterKey = @"AllowShow
 }
 
 -(void)showOrHiddenEmptySourceView{
-    if (self.emptySourceViewAvailable == NO) {
-        return;
-    }
-    
     if ([self respondsToSelector:@selector(dataSource)]) {
         self.dataSourceCount = 0;
         if ([self isKindOfClass:[UITableView class]]) {
@@ -264,11 +260,13 @@ static NSString *AllowShowEmptySourceViewWhenHaveHeaderOrFooterKey = @"AllowShow
             
         }
         
-        if (self.dataSourceCount) {
-            [self.emptySourceView removeFromSuperview];
-        }else{
-            if (self.emptySourceView.superview == nil) {
-                [self addSubview:self.emptySourceView];
+        if (self.emptySourceViewAvailable) {
+            if (self.dataSourceCount) {
+                [self.emptySourceView removeFromSuperview];
+            }else{
+                if (self.emptySourceView.superview == nil) {
+                    [self addSubview:self.emptySourceView];
+                }
             }
         }
     }
