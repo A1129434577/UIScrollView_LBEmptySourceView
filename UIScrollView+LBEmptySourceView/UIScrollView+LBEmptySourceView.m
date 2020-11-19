@@ -203,7 +203,7 @@ static NSString *AllowShowEmptySourceViewWhenHaveHeaderOrFooterKey = @"AllowShow
             
             
         }
-        else if ([self isKindOfClass:[UICollectionView class]]) {
+        else if ([self isKindOfClass:[UICollectionView class]] && ![NSStringFromClass(self.class) containsString:@"FSCalendar"]) {//FSCalendar有一个bug就是：手动调用过numberOfItemsInSection该方法后，FSCalendar它将不能正常加载cell，所以要单独区分
             UICollectionView *collectionView = (UICollectionView *)self;
             
             UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *)collectionView.collectionViewLayout;
@@ -218,41 +218,35 @@ static NSString *AllowShowEmptySourceViewWhenHaveHeaderOrFooterKey = @"AllowShow
 
             
             if (dataSource && delegate) {
-                NSInteger sections = 1;
+                NSInteger sections = collectionView.numberOfSections;
                 
-                if ([dataSource respondsToSelector:@selector(numberOfSectionsInCollectionView:)]) {
-                    sections = [dataSource numberOfSectionsInCollectionView:collectionView];
-                }
-                
-                if ([dataSource respondsToSelector:@selector(collectionView:numberOfItemsInSection:)]) {
-                    for (NSInteger section = 0; section < sections; section++) {
-                        
-                        NSUInteger sectionItemsNumber = [dataSource collectionView:collectionView numberOfItemsInSection:section];
-                        self.dataSourceCount += sectionItemsNumber;
-                        
-                        if (sectionItemsNumber == 0) {
-                            //如果section的items为零，那么如果sectionHeader和sectionFooter存在的时候个数+1
-                            if ([delegate respondsToSelector:@selector(collectionView:layout:referenceSizeForHeaderInSection:)]) {
-                                haveSectionHeader = !CGSizeEqualToSize([delegate collectionView:collectionView layout:flowLayout referenceSizeForHeaderInSection:section], CGSizeZero);
-                            }
-                            
-                            if ([delegate respondsToSelector:@selector(collectionView:layout:referenceSizeForFooterInSection:)]) {
-                                haveSectionFooter = !CGSizeEqualToSize([delegate collectionView:collectionView layout:flowLayout referenceSizeForFooterInSection:section], CGSizeZero);
-                            }
-                            
-                            
-                            if ([dataSource respondsToSelector:@selector(collectionView:viewForSupplementaryElementOfKind:atIndexPath:)]) {
-                                
-                                if (haveSectionHeader) {
-                                    self.dataSourceCount += 1;
-                                }
-                                
-                                if (haveSectionFooter) {
-                                    self.dataSourceCount += 1;
-                                }
-                            }
-                            
+                for (NSInteger section = 0; section < sections; section++) {
+                    
+                    NSUInteger sectionItemsNumber = [collectionView numberOfItemsInSection:section];
+                    self.dataSourceCount += sectionItemsNumber;
+                    
+                    if (sectionItemsNumber == 0) {
+                        //如果section的items为零，那么如果sectionHeader和sectionFooter存在的时候个数+1
+                        if ([delegate respondsToSelector:@selector(collectionView:layout:referenceSizeForHeaderInSection:)]) {
+                            haveSectionHeader = !CGSizeEqualToSize([delegate collectionView:collectionView layout:flowLayout referenceSizeForHeaderInSection:section], CGSizeZero);
                         }
+                        
+                        if ([delegate respondsToSelector:@selector(collectionView:layout:referenceSizeForFooterInSection:)]) {
+                            haveSectionFooter = !CGSizeEqualToSize([delegate collectionView:collectionView layout:flowLayout referenceSizeForFooterInSection:section], CGSizeZero);
+                        }
+                        
+                        
+                        if ([dataSource respondsToSelector:@selector(collectionView:viewForSupplementaryElementOfKind:atIndexPath:)]) {
+                            
+                            if (haveSectionHeader) {
+                                self.dataSourceCount += 1;
+                            }
+                            
+                            if (haveSectionFooter) {
+                                self.dataSourceCount += 1;
+                            }
+                        }
+                        
                     }
                 }
             }
